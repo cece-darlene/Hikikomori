@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/PlayerDeathquiet.mp3-5fa5db33773208daad735e4cb6f3013f.mp3str"
+
+[deps]
+
+source_file="res://World/Sounds/PlayerDeathquiet.mp3"
+dest_files=[ "res://.import/PlayerDeathquiet.mp3-5fa5db33773208daad735e4cb6f3013f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

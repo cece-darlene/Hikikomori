@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bg game music.mp3-0358ba1179a29a3db02f923ef4c6c012.mp3str"
+
+[deps]
+
+source_file="res://World/Sounds/Bg game music.mp3"
+dest_files=[ "res://.import/Bg game music.mp3-0358ba1179a29a3db02f923ef4c6c012.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

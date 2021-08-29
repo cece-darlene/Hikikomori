@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CollectKofu.mp3-b2eabc890ac9b7a616dbbf6368780395.mp3str"
+
+[deps]
+
+source_file="res://World/Sounds/CollectKofu.mp3"
+dest_files=[ "res://.import/CollectKofu.mp3-b2eabc890ac9b7a616dbbf6368780395.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/EnemyDie.mp3-60794cd810391adb60b013387a5bdcbf.mp3str"
+
+[deps]
+
+source_file="res://World/Sounds/EnemyDie.mp3"
+dest_files=[ "res://.import/EnemyDie.mp3-60794cd810391adb60b013387a5bdcbf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
