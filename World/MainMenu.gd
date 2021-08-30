@@ -10,7 +10,7 @@ var current_selection = 0
 func _ready():
 	set_current_selection(0)
 	
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_down") and current_selection < 1:
 		current_selection += 1
 		set_current_selection(current_selection)
@@ -20,6 +20,7 @@ func _process(delta):
 	elif Input.is_action_just_pressed("ui_accept"):
 		handle_selection(current_selection)
 		
+# warning-ignore:shadowed_variable
 func handle_selection(current_selection):
 	if current_selection == 0:
 		get_parent().add_child(start_scene.instance())

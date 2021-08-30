@@ -15,7 +15,6 @@ enum {
 
 var state = MOVE
 var velocity = Vector2.ZERO
-var score = 0
 var stats = PlayerStats
 #getting access to the node
 
@@ -25,7 +24,7 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var punchHitbox = $HitboxPivot/PunchHtbox
 
 func _ready():
-	stats.connect("no_health", self, "queue_free")	
+	stats.connect("no_health", self, "gameover")	
 	animationTree.active = true
 
 func _process(delta):
@@ -62,14 +61,17 @@ func move_state(delta):
 #		PlayerStats.max_health += 1
 		state = ATTACK
 	
-func attack_state(delta):
+func attack_state(_delta):
 #	velocity = Vector2.ZERO
 	animationState.travel("Attack")
 
 func attack_animation_finished():
 	state = MOVE
 
-func _on_Hurtbox_area_entered(area):
+func _on_Hurtbox_area_entered(_area):
 	stats.health -= 1
 #	print(stats.health)
 
+func gameover():
+	queue_free()
+	get_tree().change_scene("res://World/Gameover.tscn")

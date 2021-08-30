@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://World/Images/4.jpg" type="Texture" id=1]
 [ext_resource path="res://World/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://World/Extrude.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://World/Sounds/Introbg.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://World/Extrude.ttf"
@@ -166,3 +167,8 @@ rect_min_size = Vector2( 64, 0 )
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Exit"
+
+[node name="Introbgmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -25.435
+autoplay = true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Middlebg.mp3-a96129b6f23b81d5d985cdeee79f4c08.mp3str"
+
+[deps]
+
+source_file="res://World/Sounds/Middlebg.mp3"
+dest_files=[ "res://.import/Middlebg.mp3-a96129b6f23b81d5d985cdeee79f4c08.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

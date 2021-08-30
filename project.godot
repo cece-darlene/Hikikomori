@@ -21,7 +21,6 @@ default_bus_layout=""
 
 PlayerStats="*res://World/Player/PlayerStats.tscn"
 GlobalWorld="*res://World/World.gd"
-EnemyStats="*res://World/EnemyStats.tscn"
 
 [display]
 

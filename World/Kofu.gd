@@ -2,7 +2,7 @@ extends Node2D
 #load scene
 const KofuEffect = preload("res://World/Effects/KofuEffect.tscn")
 
-var collect = AudioStreamPlayer.new()
+#var collect = AudioStreamPlayer.new()
 var stats = PlayerStats
 
 func create_kofu_effect():
@@ -13,13 +13,14 @@ func create_kofu_effect():
 	#set position
 	kofuEffect.global_position = global_position
 	
+# warning-ignore:unused_argument
 func _on_Kofu_body_entered(body):
 	stats.health += 1
 	GlobalWorld.score += 5	
 #	print(stats.health)
 	create_kofu_effect()
-	self.add_child(collect)
-	collect.stream = load("res://World/Sounds/ding.wav")
-	collect.play()
+#	self.add_child(collect)
+#	collect.stream = load("res://World/Sounds/ding.wav")
+#	collect.play()
 	queue_free()
 
