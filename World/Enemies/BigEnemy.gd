@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-const EnemyDeathEffect = preload("res://World/Effects/EnemyDeathEffect.tscn")
+const BigEnemyDeathEffect = preload("res://World/Effects/BigEnemyDeathEffect.tscn")
 
 
-export var ACCELERATION = 50
+export var ACCELERATION = 200
 export var MAX_SPEED = 60
-export var FRICTION = 100
+export var FRICTION = 300
 
 
 enum{
@@ -76,8 +76,8 @@ func _on_Hurtbox_area_entered(area):
 	knockback = area.knockback_vector * 125
 
 func _on_Stats_no_health():
-	GlobalWorld.score += 10
-	var enemyDeathEffect = EnemyDeathEffect.instance()
+	GlobalWorld.score += 20
+	queue_free()
+	var enemyDeathEffect = BigEnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
-	queue_free()

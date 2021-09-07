@@ -242,18 +242,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=7]
 length = 0.6
 loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:flip_h")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
 
 [sub_resource type="Animation" id=8]
 length = 0.6
@@ -515,9 +503,10 @@ radius = 6.14405
 height = 31.0357
 
 [node name="Player" type="KinematicBody2D"]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
+collision_mask = 64
 script = ExtResource( 6 )
+FRICTION = 400
 
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( -1.73622, 11.5583 )
@@ -529,6 +518,7 @@ position = Vector2( 0.609686, -14.1782 )
 scale = Vector2( 1.02336, 1.02336 )
 texture = ExtResource( 1 )
 hframes = 61
+frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -579,9 +569,10 @@ shape = SubResource( 39 )
 disabled = true
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 0, -1.03829 )
 collision_layer = 4
-collision_mask = 0
+collision_mask = 16
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2( 0, -5.63591 )

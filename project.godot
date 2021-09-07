@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Hikikomori"
-run/main_scene="res://World/World.tscn"
+run/main_scene="res://World/MainMenuFinal.tscn"
 
 [audio]
 
@@ -21,6 +21,7 @@ default_bus_layout=""
 
 PlayerStats="*res://World/Player/PlayerStats.tscn"
 GlobalWorld="*res://World/World.gd"
+Pause="*res://World/Pause.tscn"
 
 [display]
 
@@ -106,6 +107,7 @@ attack={
 2d_physics/layer_4="EnemyHurtbox"
 2d_physics/layer_5="Enemy"
 2d_physics/layer_6="SoftCollisions"
+2d_physics/layer_7="Door"
 
 [physics]
 

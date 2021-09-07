@@ -8,5 +8,3 @@ func set_score(value):
 	score = value
 #	print (score)
 
-func _on_Changelvl_pressed():
-	get_tree().change_scene("res://World/WorldL2.tscn")

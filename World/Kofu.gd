@@ -14,7 +14,7 @@ func create_kofu_effect():
 	kofuEffect.global_position = global_position
 	
 # warning-ignore:unused_argument
-func _on_Kofu_body_entered(body):
+func _on_Kofu_body_entered(_body):
 	stats.health += 1
 	GlobalWorld.score += 5	
 #	print(stats.health)

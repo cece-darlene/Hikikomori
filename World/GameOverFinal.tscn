@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://World/Images/4.jpg" type="Texture" id=1]
+[ext_resource path="res://World/Extrude.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://World/GameOverFinal.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.658824 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -16.4314
+margin_top = -3.69211
+margin_right = 204.569
+margin_bottom = 49.3079
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MM" type="Button" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 10.2315
+margin_bottom = 32.2315
+custom_fonts/font = SubResource( 4 )
+text = "Main Menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TryAgain" type="Button" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -11.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 1 )
+text = "Try Again?"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 30.4709
+margin_bottom = 52.4709
+custom_fonts/font = SubResource( 2 )
+text = "Exit"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 71.9358
+margin_top = 44.5067
+margin_right = 241.936
+margin_bottom = 76.5067
+custom_fonts/font = SubResource( 3 )
+text = "Game Over"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="MM" to="." method="_on_MM_pressed"]
+[connection signal="pressed" from="TryAgain" to="." method="_on_TryAgain_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
