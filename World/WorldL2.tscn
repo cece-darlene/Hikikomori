@@ -505,7 +505,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/z_index = 0
 
 [sub_resource type="DynamicFont" id=53]
-size = 48
+size = 41
 font_data = ExtResource( 11 )
 
 [node name="World2" type="Node2D"]
@@ -614,10 +614,10 @@ autoplay = true
 color = Color( 0.65098, 0.466667, 0.796078, 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 1291.0
-margin_top = 180.0
-margin_right = 1732.0
-margin_bottom = 228.0
+margin_left = 1309.69
+margin_top = 180.667
+margin_right = 1696.69
+margin_bottom = 228.667
 custom_fonts/font = SubResource( 53 )
 text = "To be continued..."
 __meta__ = {

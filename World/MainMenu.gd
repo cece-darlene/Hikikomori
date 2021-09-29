@@ -1,7 +1,6 @@
 extends MarginContainer
 
 const start_scene = preload("res://World/World.tscn")
-var score = 0
 onready var selector_one = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/Selector
 onready var selector_two = $CenterContainer/VBoxContainer/CenterContainer4/VBoxContainer/CenterContainer/HBoxContainer/Selector
 

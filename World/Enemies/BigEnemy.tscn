@@ -112,6 +112,7 @@ position = Vector2( -1.19209e-07, 0 )
 shape = SubResource( 8 )
 
 [node name="WanderController" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( -35.0305, -42.5095 )
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]

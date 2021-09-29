@@ -25,7 +25,9 @@ func _on_Fullscreen_pressed():
 
 func _on_MM_pressed():
 	get_tree().change_scene("res://World/MainMenuFinal.tscn")
-
+	GlobalWorld.score = 0
+	get_tree().paused = false
+	set_visible(false)
 
 func _on_Exit_pressed():
 	get_tree().quit()

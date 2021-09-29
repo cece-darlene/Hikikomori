@@ -19,8 +19,9 @@ func _on_Kofu_body_entered(_body):
 	GlobalWorld.score += 5	
 #	print(stats.health)
 	create_kofu_effect()
-#	self.add_child(collect)
+	queue_free()
+	#	self.add_child(collect)
 #	collect.stream = load("res://World/Sounds/ding.wav")
 #	collect.play()
-	queue_free()
+
 
