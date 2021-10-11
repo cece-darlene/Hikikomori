@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/귀요미.mp3-5a64dd260598a2c4a934b7b5443351ae.mp3str"
+
+[deps]
+
+source_file="res://World/Sounds/귀요미.mp3"
+dest_files=[ "res://.import/귀요미.mp3-5a64dd260598a2c4a934b7b5443351ae.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

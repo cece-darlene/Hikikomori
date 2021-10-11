@@ -14,12 +14,21 @@ func create_kofu_effect():
 	kofuEffect.global_position = global_position
 	
 # warning-ignore:unused_argument
+
+#This function is to add an extra health to the player everytime 
+# the kofu (the happiness item) is being collected by the player
+#Underneath is also a signal that connects the body being entered on
+# the Kofu to the script
 func _on_Kofu_body_entered(_body):
-	stats.health += 1
+	#Adds 1 heart to the player
+	stats.health += 1 
+	#AND also adds 5 to the global score
 	GlobalWorld.score += 5	
-#	print(stats.health)
+	#The collect effect for the kofu will play when it is collected
 	create_kofu_effect()
+	#The Kofu will the disappear at the end
 	queue_free()
+	
 	#	self.add_child(collect)
 #	collect.stream = load("res://World/Sounds/ding.wav")
 #	collect.play()

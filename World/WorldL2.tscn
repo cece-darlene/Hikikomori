@@ -611,7 +611,7 @@ volume_db = -28.273
 autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.65098, 0.466667, 0.796078, 1 )
+color = Color( 0.701961, 0.537255, 0.831373, 1 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 1309.69

@@ -618,11 +618,11 @@ margin_bottom = 37.7551
 
 [node name="bgmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = -20.348
+volume_db = -25.328
 autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.65098, 0.466667, 0.796078, 1 )
+color = Color( 0.701961, 0.537255, 0.831373, 1 )
 
 [node name="Changelvl" type="Button" parent="."]
 margin_left = 783.216

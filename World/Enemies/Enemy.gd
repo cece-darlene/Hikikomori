@@ -75,9 +75,13 @@ func _on_Hurtbox_area_entered(area):
 #	print(stats.health)
 	knockback = area.knockback_vector * 125
 
+#The function below checks if the enemy has no health and if it doesn't then it begins the function otherwise it will not begin
 func _on_Stats_no_health():
-	GlobalWorld.score += 10
+	#10 points are added each time the player kills an enemy
+	GlobalWorld.score += 10 
+	#the enemy death effect variable, then it adds an instance of the enemy death effect
 	var enemyDeathEffect = EnemyDeathEffect.instance()
+	#it then plays the death effect when the enemy dies
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
 	queue_free()
