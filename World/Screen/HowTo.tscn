@@ -1,0 +1,339 @@
+[gd_scene load_steps=56 format=2]
+
+[ext_resource path="res://World/Sprites/bear.png" type="Texture" id=1]
+[ext_resource path="res://World/Screen/HowTo.gd" type="Script" id=2]
+[ext_resource path="res://World/Font/DigitalDisco.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://World/Images/bg of game 3.jpg" type="Texture" id=4]
+[ext_resource path="res://World/Sprites/ghost.png" type="Texture" id=5]
+[ext_resource path="res://World/Sprites/goblin.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 15
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 33, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 66, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 99, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 132, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 165, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 198, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 231, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 264, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 297, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 330, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 363, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 396, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 1 )
+region = Rect2( 429, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 1 )
+region = Rect2( 462, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 1 )
+region = Rect2( 495, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 528, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 1 )
+region = Rect2( 561, 0, 33, 33 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 594, 0, 33, 33 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 5 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 5 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 5 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 5 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 5 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 5 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 5 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=33]
+animations = [ {
+"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 6 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 6 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 6 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 6 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 6 )
+region = Rect2( 256, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 6 )
+region = Rect2( 288, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 6 )
+region = Rect2( 320, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 6 )
+region = Rect2( 352, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 6 )
+region = Rect2( 384, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 6 )
+region = Rect2( 416, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 6 )
+region = Rect2( 448, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=49]
+animations = [ {
+"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="HowTo" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.215686, 0.227451, 0.513726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Sprite" parent="ColorRect"]
+modulate = Color( 1, 1, 1, 0.517647 )
+position = Vector2( 160.005, 88 )
+scale = Vector2( 0.240657, 0.243079 )
+texture = ExtResource( 4 )
+
+[node name="How to" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -44.0
+margin_top = 3.0
+margin_right = 44.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 19.75, 10.5 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.733333, 0.870588, 0.960784, 1 )
+text = "How To play"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Descip" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 38.7249
+margin_right = 313.0
+margin_bottom = 73.7249
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.733333, 0.870588, 0.960784, 1 )
+text = "Your aim is to help Hiko defeat the enemies and get to the end."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 6.0
+margin_top = 124.102
+margin_right = 456.0
+margin_bottom = 124.102
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.733333, 0.870588, 0.960784, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "If you lose health you can collect the kofu (which is the cat) and you will gain 1 heart. Collecting the cat will give you 5 points. Killing the bear enemies are 10 points and the goblins are 20 points. Try to get as many points as you can.
+
+ 
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 93.0
+margin_bottom = 22.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="HBoxContainer"]
+margin_right = 46.0
+margin_bottom = 22.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.733333, 0.870588, 0.960784, 1 )
+text = "Back"
+flat = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="Button" parent="HBoxContainer"]
+margin_left = 50.0
+margin_right = 93.0
+margin_bottom = 22.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.733333, 0.870588, 0.960784, 1 )
+text = "Next"
+flat = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 57.5938, 107.943 )
+scale = Vector2( 2.76779, 2.76779 )
+frames = SubResource( 24 )
+frame = 12
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 153.464, 115.834 )
+scale = Vector2( 3.48327, 3.48327 )
+frames = SubResource( 33 )
+frame = 6
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 254.873, 103.559 )
+scale = Vector2( 3.69861, 3.69861 )
+frames = SubResource( 49 )
+frame = 14
+playing = true
+
+[connection signal="pressed" from="HBoxContainer/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="HBoxContainer/Next" to="." method="_on_Next_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mp3-now.com - Rain  8bit Relaxing Music.mp3-14a6bb87face042c3de9cd723d36f4aa.mp3str"
+
+[deps]
+
+source_file="res://World/Sounds/mp3-now.com - Rain  8bit Relaxing Music.mp3"
+dest_files=[ "res://.import/mp3-now.com - Rain  8bit Relaxing Music.mp3-14a6bb87face042c3de9cd723d36f4aa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

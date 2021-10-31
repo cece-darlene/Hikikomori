@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://World/UI/Score Label.gd" type="Script" id=1]
+[ext_resource path="res://World/Font/DigitalDisco.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="Score2" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 9.00543
+margin_top = 6.88651
+margin_right = 60.0054
+margin_bottom = 20.8865
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.501961, 0.556863, 0.745098, 1 )
+text = "Score"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

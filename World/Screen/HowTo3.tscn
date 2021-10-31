@@ -1,0 +1,200 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://World/Font/DigitalDisco.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://World/Images/bg of game 3.jpg" type="Texture" id=2]
+[ext_resource path="res://World/Sprites/cat.png" type="Texture" id=3]
+[ext_resource path="res://World/Screen/HowTo3.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 15
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 288, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 320, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
+region = Rect2( 352, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 3 )
+region = Rect2( 416, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
+region = Rect2( 448, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 3 )
+region = Rect2( 480, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 3 )
+region = Rect2( 544, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 3 )
+region = Rect2( 576, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 3 )
+region = Rect2( 608, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 3 )
+region = Rect2( 672, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Howto3" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.215686, 0.227451, 0.513726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Sprite" parent="ColorRect"]
+modulate = Color( 1, 1, 1, 0.517647 )
+position = Vector2( 160.005, 88 )
+scale = Vector2( 0.240657, 0.243079 )
+texture = ExtResource( 2 )
+
+[node name="How to" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -44.0
+margin_top = 3.0
+margin_right = 44.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 19.75, 10.5 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.733333, 0.870588, 0.960784, 1 )
+text = "How To play"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Descip" type="Label" parent="."]
+margin_left = 7.0079
+margin_top = 30.3337
+margin_right = 282.008
+margin_bottom = 179.334
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.733333, 0.870588, 0.960784, 1 )
+text = "If you lose health you can collect the kofu and you will gain 1 heart. Collecting the cat will also give you 5 points so be careful to not collect it before you fight an enemy. 
+Bear = 10, Ghost = 20, Goblin = 30
+Try your best, you can always try again"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 46.0
+margin_bottom = 22.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="HBoxContainer"]
+margin_right = 46.0
+margin_bottom = 22.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.733333, 0.870588, 0.960784, 1 )
+text = "Back"
+flat = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 297.095, 117.544 )
+scale = Vector2( 1.45676, 1.45676 )
+frames = SubResource( 26 )
+frame = 7
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 218.603, 6.65514 )
+scale = Vector2( 0.926751, 0.924683 )
+frames = SubResource( 26 )
+frame = 6
+playing = true
+
+[connection signal="pressed" from="HBoxContainer/Back" to="." method="_on_Back_pressed"]

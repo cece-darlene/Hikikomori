@@ -1,0 +1,158 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://World/Player/Kofu.gd" type="Script" id=1]
+[ext_resource path="res://World/Sprites/light.png" type="Texture" id=2]
+[ext_resource path="res://World/Sprites/cat.png" type="Texture" id=3]
+[ext_resource path="res://World/Sounds/CollectSound.mp3" type="AudioStream" id=4]
+[ext_resource path="res://World/Sprites/shadow.png" type="Texture" id=5]
+[ext_resource path="res://World/Collision boxes/Hurtbox.tscn" type="PackedScene" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 288, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 320, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 352, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 416, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
+region = Rect2( 448, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 480, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
+region = Rect2( 544, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 3 )
+region = Rect2( 576, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 3 )
+region = Rect2( 608, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 3 )
+region = Rect2( 672, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=23]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=24]
+radius = 11.7234
+height = 3.86429
+
+[sub_resource type="CapsuleShape2D" id=25]
+radius = 9.98925
+height = 5.11213
+
+[node name="Kofu" type="Area2D"]
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="Shadow" type="Sprite" parent="."]
+position = Vector2( -0.0169115, 12.1869 )
+scale = Vector2( 1.3375, 1.13484 )
+texture = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 1.31588, 1.31588 )
+frames = SubResource( 23 )
+frame = 9
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 1.98135, 6.90185 )
+shape = SubResource( 24 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 2.22527, 8.5175 )
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( -0.0254402, -0.0670195 )
+shape = SubResource( 25 )
+
+[node name="CollectKofu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.913
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 2.65164, 10.6066 )
+scale = Vector2( 0.654754, 0.654754 )
+texture = ExtResource( 2 )
+texture_scale = 0.5
+color = Color( 0.85098, 0.729412, 0.25098, 1 )
+energy = 0.7
+shadow_enabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_Kofu_body_entered"]
+
+[editable path="Hurtbox"]

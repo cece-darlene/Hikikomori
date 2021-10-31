@@ -20,7 +20,11 @@ animations = [ {
 } ]
 
 [node name="HitEffect" type="AnimatedSprite"]
+scale = Vector2( 0.658469, 0.658469 )
 frames = SubResource( 3 )
 animation = "Animate"
-playing = true
+offset = Vector2( -20, 0 )
 script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true

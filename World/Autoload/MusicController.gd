@@ -1,7 +1,7 @@
 extends Node
 
 #Loads the imported music
-var introMusic = load("res://World/Sounds/귀요미.mp3")
+var introMusic = load("res://World/Sounds/mp3-now.com - Rain  8bit Relaxing Music.mp3")
 
 func _ready():
 	pass

@@ -1,0 +1,694 @@
+[gd_scene load_steps=53 format=2]
+
+[ext_resource path="res://World/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://World/Player/PunchHitbox.gd" type="Script" id=2]
+[ext_resource path="res://World/Sprites/light.png" type="Texture" id=3]
+[ext_resource path="res://World/Enemies/HikiPlayer.png" type="Texture" id=4]
+[ext_resource path="res://World/Sprites/shadow.png" type="Texture" id=5]
+[ext_resource path="res://World/Sounds/player hit.mp3" type="AudioStream" id=6]
+[ext_resource path="res://World/Collision boxes/Hitbox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/Collision boxes/Hurtbox.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/whiteColourShader.shader" type="Shader" id=9]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 9 )
+shader_param/active = false
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 7.35608
+height = 23.0987
+
+[sub_resource type="Animation" id=3]
+length = 0.4
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_animation_finished"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 57, 58, 59, 60 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitboxPivot:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HitboxPivot/PunchHtbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0.1 )
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.4
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_animation_finished"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 53, 54, 55, 56 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitboxPivot:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 180.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HitboxPivot/PunchHtbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0.1 )
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.4
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_animation_finished"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 45, 46, 47, 48 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitboxPivot:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HitboxPivot/PunchHtbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0.1 )
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.4
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_animation_finished"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 49, 50, 51, 52 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitboxPivot:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 270.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HitboxPivot/PunchHtbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0.1 )
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 33, 34, 35, 36, 37, 38 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.6
+loop = true
+
+[sub_resource type="Animation" id=9]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 39, 40, 41, 42, 43, 44 ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 27, 28, 29, 30, 31, 32 ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 21 ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 20 ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 22, 23, 24, 25, 26 ]
+}
+
+[sub_resource type="Animation" id=16]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10, 11, 12, 13 ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 3, 4, 5, 6, 4 ]
+}
+
+[sub_resource type="Animation" id=18]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 14, 15, 16, 17, 18, 19 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "AttackLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "AttackDown"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "AttackRight"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "AttackUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=23]
+blend_point_0/node = SubResource( 19 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 20 )
+blend_point_1/pos = Vector2( 0, 1.1 )
+blend_point_2/node = SubResource( 21 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 22 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "IdleLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "IdleDown"
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "IdleRight"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "IdleUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=28]
+blend_point_0/node = SubResource( 24 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 25 )
+blend_point_1/pos = Vector2( 0, 1.1 )
+blend_point_2/node = SubResource( 26 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 27 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "RunLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "RunDown"
+
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "RunRight"
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "RunUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=33]
+blend_point_0/node = SubResource( 29 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 30 )
+blend_point_1/pos = Vector2( 0, 1.1 )
+blend_point_2/node = SubResource( 31 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 32 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachine" id=38]
+states/Attack/node = SubResource( 23 )
+states/Attack/position = Vector2( 278, 170 )
+states/Idle/node = SubResource( 28 )
+states/Idle/position = Vector2( 269, 72 )
+states/Run/node = SubResource( 33 )
+states/Run/position = Vector2( 480, 72 )
+transitions = [ "Idle", "Run", SubResource( 34 ), "Run", "Idle", SubResource( 35 ), "Idle", "Attack", SubResource( 36 ), "Attack", "Idle", SubResource( 37 ) ]
+start_node = "Idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=39]
+
+[sub_resource type="CapsuleShape2D" id=40]
+radius = 22.0592
+height = 30.0849
+
+[sub_resource type="CapsuleShape2D" id=41]
+radius = 6.14405
+height = 31.0357
+
+[sub_resource type="Animation" id=42]
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=43]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 64
+script = ExtResource( 1 )
+FRICTION = 400
+
+[node name="Shadow" type="Sprite" parent="."]
+position = Vector2( -1.73622, 11.5583 )
+scale = Vector2( 1.70772, 1.70772 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="." groups=[
+"Player",
+]]
+material = SubResource( 1 )
+position = Vector2( 0.609686, -14.1782 )
+scale = Vector2( 1.02336, 1.02336 )
+texture = ExtResource( 4 )
+hframes = 61
+frame = 57
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -1.03086, -1.03829 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/AttackDown = SubResource( 3 )
+anims/AttackLeft = SubResource( 4 )
+anims/AttackRight = SubResource( 5 )
+anims/AttackUp = SubResource( 6 )
+anims/DeathDown = SubResource( 7 )
+anims/DeathL = SubResource( 8 )
+anims/DeathR = SubResource( 9 )
+anims/DeathUp = SubResource( 10 )
+anims/IdleDown = SubResource( 11 )
+anims/IdleLeft = SubResource( 12 )
+anims/IdleRight = SubResource( 13 )
+anims/IdleUp = SubResource( 14 )
+anims/RunDown = SubResource( 15 )
+anims/RunLeft = SubResource( 16 )
+anims/RunRight = SubResource( 17 )
+anims/RunUp = SubResource( 18 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 38 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 39 )
+parameters/Attack/blend_position = Vector2( 0, 1 )
+parameters/Idle/blend_position = Vector2( 0, 1 )
+parameters/Run/blend_position = Vector2( 0, 1 )
+
+[node name="HitboxPivot" type="Position2D" parent="."]
+visible = false
+position = Vector2( 0, -8 )
+rotation = 1.5708
+
+[node name="PunchHtbox" parent="HitboxPivot" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 18.9202, -1.46009 )
+collision_layer = 2
+collision_mask = 8
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="HitboxPivot/PunchHtbox" index="0"]
+position = Vector2( -0.315353, 0.210201 )
+shape = SubResource( 40 )
+disabled = true
+
+[node name="Hurtbox" parent="." instance=ExtResource( 8 )]
+position = Vector2( 0, -1.03829 )
+collision_layer = 4
+collision_mask = 16
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( 0, -5.63591 )
+shape = SubResource( 41 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -1.49012e-08, -7.59394 )
+scale = Vector2( 0.52671, 0.52671 )
+texture = ExtResource( 3 )
+color = Color( 0.901961, 0.627451, 0.505882, 1 )
+energy = 0.7
+shadow_enabled = true
+
+[node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Start = SubResource( 42 )
+anims/stop = SubResource( 43 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+
+[editable path="HitboxPivot/PunchHtbox"]
+[editable path="Hurtbox"]

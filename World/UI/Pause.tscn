@@ -1,0 +1,115 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://World/UI/Pause.gd" type="Script" id=1]
+[ext_resource path="res://World/Images/black texture.jpg" type="Texture" id=2]
+[ext_resource path="res://World/Font/DigitalDisco.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 168.463, 160.345 ]
+}
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.537255 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.235977
+margin_top = -1.0
+margin_right = -0.235962
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -32.5
+margin_top = 25.0
+margin_right = 32.5
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+text = "Paused"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -53.0
+margin_top = -32.5
+margin_right = 53.0
+margin_bottom = 67.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+margin_right = 106.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 2 )
+text = "Continue"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen" type="Button" parent="VBoxContainer"]
+margin_top = 26.0
+margin_right = 106.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 3 )
+text = "Fullscreen"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MM" type="Button" parent="VBoxContainer"]
+margin_top = 52.0
+margin_right = 106.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 4 )
+text = "Main Menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+margin_top = 78.0
+margin_right = 106.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 5 )
+text = "Exit"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Fullscreen" to="." method="_on_Fullscreen_pressed"]
+[connection signal="pressed" from="VBoxContainer/MM" to="." method="_on_MM_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
